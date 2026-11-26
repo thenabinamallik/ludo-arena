@@ -1,0 +1,119 @@
+
+# ==========================================
+# LUDO ARENA - Git Ignore
+# ==========================================
+
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
+coverage/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+data/
+database/local/
+
+# Runtime files
+*.pid
+*.pid.lock
+*.seed
+*.sock
+
+# Cache
+.cache/
+.parcel-cache/
+.vite/
+.turbo/
+.eslintcache/
+*.tsbuildinfo
+
+# Temporary files
+tmp/
+temp/
+.temp/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE and editors
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# Testing
+playwright-report/
+test-results/
+.nyc_output/
+
+# Local configuration
+config.local.*
+*.local.json
+*.local.yaml
+
+# Generated assets
+generated/
+uploads/
+*.bak
+*.backup
+
+# Package manager
+.npm/
+.yarn/
+.pnpm-store/
+
+# Python (if used for utilities)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Security certificates and keys
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Local server state
+server.pid
+server.lock
+.local-state/
+sessions/
+
+# Environment-specific files
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Keep essential project files
+!.gitignore
+!README.md

@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --arena-bg: #0b1120;
+    --arena-surface: #131c31;
+    --arena-card: #1a2640;
+    --arena-border: rgba(148, 163, 184, 0.18);
+    --arena-text: #f8fafc;
+    --arena-muted: #94a3b8;
+    --board-frame: #1e293b;
+    --board-cell: #ffffff;
+    --board-cell-stroke: #cbd5e1;
+  }
+
+  .theme-light {
+    --arena-bg: #f1f5f9;
+    --arena-surface: #ffffff;
+    --arena-card: #f8fafc;
+    --arena-border: rgba(15, 23, 42, 0.12);
+    --arena-text: #0f172a;
+    --arena-muted: #475569;
+  }
+
+  body {
+    background-color: var(--arena-bg);
+    color: var(--arena-text);
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.9;
+  }
+  70% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 1.5s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}

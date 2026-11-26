@@ -1,0 +1,30 @@
+{
+  "name": "ludo-arena",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LUDO ARENA - Browser-hosted 2/4/6/8-player LAN multiplayer Ludo game",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,web -c cyan,magenta \"npm run dev --workspace=@ludo-arena/server\" \"npm run dev --workspace=@ludo-arena/web\"",
+    "dev:server": "npm run dev --workspace=@ludo-arena/server",
+    "dev:web": "npm run dev --workspace=@ludo-arena/web",
+    "build": "npm run build --workspace=@ludo-arena/shared-types && npm run build --workspace=@ludo-arena/validation && npm run build --workspace=@ludo-arena/board-config && npm run build --workspace=@ludo-arena/game-engine && npm run build --workspace=@ludo-arena/web && npm run build --workspace=@ludo-arena/server",
+    "start": "npm run start --workspace=@ludo-arena/server",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -b"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9"
+  },
+  "dependencies": {
+    "socket.io-client": "^4.8.1"
+  }
+}
